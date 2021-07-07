@@ -66,6 +66,7 @@ void setup(){
 ///////////////////////////////////////////////////////////////////
 /////////////////////SEGMENTO DE CODIGO DE SUAREZ//////////////////
 *******************************************************************
+//efecto estetico de barrido de mensaje en display 
 void loop(){
   for(int i=0;i<4;i++){
      barrido(i);
