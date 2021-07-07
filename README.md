@@ -2,6 +2,8 @@
 PROYECTO_ CALCULADORA_FUNCIONAL_TEAM_SAVE.THE.SEMESTER.COFFEE
 //calculadora basica
 //realiza operaciones basicas con cuatro digitos...
+
+///////////// ALEXIS PEÑA////////////////////////////////////////
 #include <LiquidCrystal.h>
 /* LCD RS     PIN 13
  * LCD ENABLE PIN 12
