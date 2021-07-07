@@ -63,3 +63,38 @@ void setup(){
     }
   lcd.clear();
   }
+///////////////////////////////////////////////////////////////////
+/////////////////////SEGMENTO DE CODIGO DE SUAREZ//////////////////
+*******************************************************************
+void loop(){
+  for(int i=0;i<4;i++){
+     barrido(i);
+     asignacion(i);
+    }
+  }
+void barrido(int w){
+  switch(w){
+   case 0 :  digitalWrite(fila1,HIGH);
+             digitalWrite(fila2,LOW);
+             digitalWrite(fila3,LOW);
+             digitalWrite(fila4,LOW);
+             break;
+    case 1 : digitalWrite(fila1,LOW);
+             digitalWrite(fila2,HIGH);
+             digitalWrite(fila3,LOW);
+             digitalWrite(fila4,LOW);
+             break;
+    case 2 : digitalWrite(fila1,LOW);
+             digitalWrite(fila2,LOW);
+             digitalWrite(fila3,HIGH);
+             digitalWrite(fila4,LOW);
+             break;
+    case 3 : digitalWrite(fila1,LOW);
+             digitalWrite(fila2,LOW);
+             digitalWrite(fila3,LOW);
+             digitalWrite(fila4,HIGH);
+             break;
+    default : break;    
+    }
+  }  
+///////////////////////////////////////////////////////////////////
