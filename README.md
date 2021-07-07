@@ -29,3 +29,37 @@ int botones[4][4]={{1,2,3,'A'},
                    {'*',0,'#','D'}
                    };
  ///////////////////////////////////////////////////////////////////
+ ////// porcion de codigo editada por francisco ////////////////////
+ void barrido(int w); 
+void asignacion(int g); 
+void calcular (int c); 
+long var(int y);        
+void setup(){
+  Serial.begin(9600);
+  pinMode(fila1,OUTPUT);
+  pinMode(fila2,OUTPUT);
+  pinMode(fila3,OUTPUT);
+  pinMode(fila4,OUTPUT);
+  pinMode(col1,INPUT);
+  pinMode(col2,INPUT);
+  pinMode(col3,INPUT);
+  pinMode(col4,INPUT);
+  lcd.begin(16,2);
+  lcd.clear();
+  lcd.setCursor(0,0);
+  lcd.print("Proyecto Calculadora");
+  lcd.setCursor(0,1);
+  lcd.print("  Arduino Uno   ");
+    //lcd.setCursor(21,0);
+    //lcd.autoscroll();
+    //lcd.print(" ");
+  for(int i=0;i<16;i++){
+    lcd.scrollDisplayLeft();
+    delay(200);
+    }
+   for(int i=0;i<16;i++){
+    lcd.scrollDisplayRight();
+    delay(200);
+    }
+  lcd.clear();
+  }
