@@ -101,3 +101,34 @@ void barrido(int w){
     }
   }  
 ///////////////////////////////////////////////////////////////////
+void asignacion(int g){
+  if(digitalRead(col1)==HIGH){
+    delay(100);
+    if(digitalRead(col1)==LOW){
+      key=botones[g][0];
+      calcular(key);
+      }
+    }
+  if(digitalRead(col2)==HIGH){
+    delay(100);
+    if(digitalRead(col2)==LOW){
+      key=botones[g][1];
+      calcular(key);
+      }
+    }
+  if(digitalRead(col3)==HIGH){
+    delay(100);
+    if(digitalRead(col3)==LOW){
+      key=botones[g][2];
+      calcular(key);
+      }
+    }
+  if(digitalRead(col4)==HIGH){
+    delay(100);
+    if(digitalRead(col4)==LOW){
+      key=botones[g][3];
+      calcular(key);
+      }
+    }
+  }
+////////////////////////////////////////////////////
