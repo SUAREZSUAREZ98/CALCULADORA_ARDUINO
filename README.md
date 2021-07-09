@@ -47,3 +47,22 @@ void setup(){
     lcd.clear();
 }
 //PEÑA//
+void loop(){
+    char key = myKeypad.getKey();
+    if (key != NO_KEY && (key=='1'||key=='2'||key=='3'||key=='4'||key=='5'||key=='6'||key=='7'||key=='8'||key=='9'||key=='0')){
+    if (valorActual != true){
+        num1 = num1 + key;
+        int numLength = num1.length();
+        movimiento = numLength;
+        lcd.setCursor(0, 0);
+        lcd.print(num1);
+    }
+    else {
+        num2 = num2 + key;
+        int numLength = num2.length();
+        lcd.setCursor(movimiento+1, 0);
+        lcd.print(num2);
+        final = true;
+    }
+    }
+ ///////francisco ////////////
