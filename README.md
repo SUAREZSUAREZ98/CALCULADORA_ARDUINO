@@ -66,3 +66,56 @@ void loop(){
     }
     }
  ///////francisco ////////////
+ 
+ else if (valorActual == false && key != NO_KEY && (key == '/' || key == '*' || key == '-' || key == '+')){
+    if (valorActual == false){
+        valorActual = true;
+        op = key;
+        lcd.setCursor(movimiento,0);
+        lcd.print(op);
+    }
+    }
+
+    else if (final == true && key != NO_KEY && key == '='){
+    if (op == '+'){
+        total = num1.toInt() + num2.toInt();
+    }
+    else if (op == '-'){
+        total = num1.toInt() - num2.toInt();
+    }
+    else if (op == '*'){
+        total = num1.toInt() * num2.toInt();
+    }
+    else if (op == '/'){
+        if(num2.toInt()==0){
+        total = ' ';
+        }else{
+        total = num1.toInt() / num2.toInt();
+        }
+    }
+///////////arturo/////////////////////////////////
+
+num3=String(total);
+    lcd.clear();
+    lcd.setCursor(15,0);
+    lcd.autoscroll();
+    if(total==' '){
+        lcd.print("Sintax Error");
+    }else if(num3.length()>4){
+        lcd.print("No hay memoria");
+    }else{
+        lcd.print(total);
+    }
+    lcd.noAutoscroll();
+    }
+    else if (key != NO_KEY && key == 'X'){
+        lcd.clear();
+        valorActual = false;
+        final = false;
+        num1 = "";
+        num2 = "";
+        total = 0;
+        op = ' ';
+    }
+}
+////////////////SUAREZ/////////////////////
